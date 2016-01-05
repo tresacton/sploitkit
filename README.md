@@ -24,7 +24,7 @@ This script (./badchars.rb) is designed to help determine which chars are bad. T
 
 ## MagicCalc
 
-This script (./magic_calc.rb) is designed to help with the calculations required to manually XOR shellcode when dealing with an extremely limited allowed character set. It assumes you know that what we're doing here is using a register (after it's been XORd to zero) to calculate the difference between the hex representation of zero to our desired hex code, so that it can be pushed to the stack and executed. If I haven't articulated this well enough, or you haven't come across this yet, do some googling for "manually encoding shellcode to bypass character filters".
+This script (./magic_calc.rb) is designed to help with the calculations required to push encoded shellcode to the stack when dealing with an extremely limited allowed character set. It assumes you know that what we're doing here is using a register (after it's been XORd to zero) to calculate the difference between the hex representation of zero to our desired hex code, so that it can be pushed to the stack and executed. If I haven't articulated this well enough, or you haven't come across this yet, do some googling for "manually encoding shellcode to bypass character filters".
 
 
 ## Others... on the way...
