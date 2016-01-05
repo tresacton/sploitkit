@@ -13,8 +13,8 @@ No installation required (assuming you have Ruby installed - These were tested i
 
 And then execute:
 
-    $ cd sploitkit
-    $ ./script_name [args may be required depending on the script, but hopefully I've already written a decent help prompt for you]
+    cd sploitkit
+    ./script_name [args may be required depending on the script, but hopefully I've already written a decent help prompt for you]
 
 
 ## BadChars
