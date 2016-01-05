@@ -1,5 +1,4 @@
-#!/Users/acton/.rvm/rubies/ruby-2.1.1/bin/ruby
-
+#!/usr/bin/ruby
 
 
 # THIS CLASS TURNS STRING OBJECTS INTO HEX FIXNUMS
