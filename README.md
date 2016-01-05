@@ -31,8 +31,30 @@ This script (./magic_calc.rb) is designed to help with the calculations required
 
 This script (./hexsum.rb) is sort of a sanity check for magic_calc.rb. It confirms the calculations are correct, and then provides the hexcodes in little endian format.
 
-    ./hexsum.rb 7f2b5277 01055c32 0b754c1b reverse
+    $ ./hexsum.rb 7e377b26 01131635 0c5b6969  reverse
+    _  _ ____ _  _ ____ _  _ _  _
+    |__| |___  //  [__  |  | |//|
+    |  | |___ _//_ ___] |__| |  |
+    
+                     by T.J Acton
+    
+    Hexcode: 7e377b26   ||   Final Hexcode: 267b377e
+    Hexcode: 01131635   ||   Final Hexcode: 35161301
+    Hexcode: 0c5b6969   ||   Final Hexcode: 69695b0c
+    
+     RESULT: 0xc4faa58b
 
+
+
+    $ ./hexsum.rb 7e377b26 01131635 0c5b6969 
+    _  _ ____ _  _ ____ _  _ _  _
+    |__| |___  //  [__  |  | |//|
+    |  | |___ _//_ ___] |__| |  |
+    
+                     by T.J Acton
+    
+    
+     RESULT: 0x8ba5fac4
 
 ## Others... on the way...
 
