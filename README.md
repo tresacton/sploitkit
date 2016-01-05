@@ -27,6 +27,23 @@ This script (./badchars.rb) is designed to help determine which chars are bad. T
 This script (./magic_calc.rb) is designed to help with the calculations required to push encoded shellcode to the stack when dealing with an extremely limited allowed character set. It assumes you know that what we're doing here is using a register (after it's been XORd to zero) to calculate the difference between the hex representation of zero to our desired hex code, so that it can be pushed to the stack and executed. If I haven't articulated this well enough, or you haven't come across this yet, do some googling for "manually encoding shellcode to bypass character filters".
 
 
+    $ ./magic_calc.rb -t 745a053c -s 729735
+    _  _ ____ ____ _ ____ ____ ____ _    ____
+    |\/| |__| | __ | |    |    |__| |    |   
+    |  | |  | |__] | |___ |___ |  | |___ |___
+    
+                                  by T.J Acton
+    
+    TARGET: 745a053c
+    SEED: 729735
+    Finding all 3 subtractions to produce 0x745a053c, from 0x8ba5fac4
+    =======================
+    #   0xffffffff - 0x745a053c = 0x8ba5fac4                                 
+    #
+    #   A: 0x7e377b26  + B: 0x1131635    + C: 0xc5b6969      =  0x8ba5fac4     ( Used Seed 729735)
+    =======================
+
+
 ## HexSum
 
 This script (./hexsum.rb) is sort of a sanity check for magic_calc.rb. It confirms the calculations are correct, and then provides the hexcodes in little endian format.
