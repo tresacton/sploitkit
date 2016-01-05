@@ -19,6 +19,12 @@ And then execute:
 
 ## BadChars
 
+___  ____ ___  ____ _  _ ____ ____ ____
+|__] |__| |  \ |    |__| |__| |__/ [__ 
+|__] |  | |__/ |___ |  | |  | |  \ ___]
+
+                           by T.J. Acton
+
 This script (./badchars.rb) is designed to help determine which chars are bad. This script assumes you are working with Olly (or at least, something that results in hex printed in the same format as Olly's binary paste (e.g. 01 0203 04 05 instead of \x01\x02\x03\x04\x05). Remember, I wrote this to suit me. I'm happy to accept pull requests if anybody would like to contribute to making it a little friendlier for use with other debuggers...
 
 ## Others... on the way...
