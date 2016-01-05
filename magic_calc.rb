@@ -1,6 +1,15 @@
 #!/usr/bin/ruby
 
 
+puts "_  _ ____ ____ _ ____ ____ ____ _    ____"
+puts "|\\/| |__| | __ | |    |    |__| |    |   "
+puts "|  | |  | |__] | |___ |___ |  | |___ |___"
+puts
+puts"                              by T.J Acton"
+puts                                        
+
+
+
 # THIS CLASS TURNS STRING OBJECTS INTO HEX FIXNUMS
 require 'delegate'
 require 'set'

@@ -1,10 +1,18 @@
 #!/usr/bin/ruby
 
 
+puts "_  _ ____ _  _ ____ _  _ _  _"
+puts "|__| |___  \//  [__  |  | |\//|"
+puts "|  | |___ _//\_ ___] |__| |  |"
+puts
+puts "                 by T.J Acton"
+puts                            
+
+
+
 # THIS CLASS TURNS STRING OBJECTS INTO HEX FIXNUMS
 require 'delegate'
 require 'set'
-
 
 
 
@@ -27,6 +35,9 @@ to_s
 end
 
 def has_bad_chars?
+	# this is the list of allowed chars
+	# modify this to include more chars if your character set is 
+	#        not as restricetd as this.
 	nice_list = %w{0x0 01 02 03 04 05 06 07 08 09 0b 0c 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 30 31 32 33 34 35 36 37 38 39 3b 3c 3d 3e 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f}
 	
 
@@ -87,7 +98,14 @@ end
 
 def little_endian_format hexcode
 	final_hexcode = ""
-	hexcode_unf = hexcode.scan(/../)
+	hexcode_unf = hexcode.to_s
+	hexcode_unf = hexcode_unf.gsub("0x","")
+	if hexcode_unf.size > 5
+		until hexcode_unf.size == 8
+			hexcode_unf = '0'+hexcode_unf 
+		end
+	end
+	hexcode_unf = hexcode_unf.scan(/../)
 	hexcode = []
 	hexcode_unf.each do |b1|
 		hexcode << b1.gsub('0x','')
@@ -106,7 +124,6 @@ def calculate a,b,c,reverse
 		b= little_endian_format b
 		c= little_endian_format c
 	end
-
 
 	a= HexDo.new(a.to_i(16))
 	b= HexDo.new(b.to_i(16))
