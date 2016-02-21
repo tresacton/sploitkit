@@ -16,6 +16,11 @@ And then execute:
     cd sploitkit
     ./script_name [args may be required depending on the script, but hopefully I've already written a decent help prompt for you]
 
+## Ror Spike 
+This script (./ror_spike.rb) is a wrapper for the SPIKE fuzzer. It creates spike templates for multiple commands (as specified in the script), and launch spike for each created file. It logs the variable that caused the crash, the command it was using, and prompts you to add a custom comment to the log. Later, you can navigate to the log and view a history of the crashes you found.
+
+I would have liked to have modified it to wait for you to restart the debugger, then keep trying the rest of the commands, however, I wasn't able to get this working correctly in the time I had to code this. It's on my list of things to do though.
+
 
 ## BadChars
 
