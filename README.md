@@ -32,7 +32,7 @@ I would have liked to have modified it to wait for you to restart the debugger, 
     You'll need to edit this script to change the commands available if you're not exploiting vulnserver (line: 25)
 
 #
-    $ ruby ror_spike.rb HELP 192.168.1.1 8080
+    $ ruby ror_spike.rb TRUN 192.168.1.1 8080
     +-+-+-+ +-+-+-+-+-+
     |R|o|R| |S|p|i|k|e|
     +-+-+-+ +-+-+-+-+-+
