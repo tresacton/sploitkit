@@ -69,7 +69,7 @@ until fin == true # todo: until last char
 
 		        if bad_chars.include? char
 		        	puts "already found this bad char, skipping #{char}"
-		        	current_position =i+1
+		        	current_position =i
 		        else
 			        bad_chars << char
 			        remaining_hex.delete_at i
@@ -94,7 +94,7 @@ until fin == true # todo: until last char
 							input << "\\x"
 							input << hex
 						end
-				        current_position = i+1
+				        current_position = i
 				        puts
 				    end
 				end
