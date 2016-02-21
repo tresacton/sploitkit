@@ -21,6 +21,52 @@ This script (./ror_spike.rb) is a wrapper for the SPIKE fuzzer. It creates spike
 
 I would have liked to have modified it to wait for you to restart the debugger, then keep trying the rest of the commands, however, I wasn't able to get this working correctly in the time I had to code this. It's on my list of things to do though.
 
+    $ ruby ror_spike.rb 
+    +-+-+-+ +-+-+-+-+-+
+    |R|o|R| |S|p|i|k|e|
+    +-+-+-+ +-+-+-+-+-+
+          by T.J Acton
+    
+    Usage: ror_spike.rb ALL 192.168.1.1 8080
+    Three arguments are required - command (e.g. TRUN, or ALL), host, port
+    You'll need to edit this script to change the commands available if you're not exploiting vulnserver (line: 25)
+
+#
+    $ ruby ror_spike.rb HELP 192.168.1.1 8080
+    +-+-+-+ +-+-+-+-+-+
+    |R|o|R| |S|p|i|k|e|
+    +-+-+-+ +-+-+-+-+-+
+          by T.J Acton
+    
+    Running: HELP
+    cmd: TRUN - SPK: Total Number of Strings is 681
+    cmd: TRUN - SPK: Fuzzing
+    cmd: TRUN - SPK: Fuzzing Variable 0:0
+    cmd: TRUN - SPK: ror_HELP.spk : line read=Welcome to my server
+    cmd: TRUN - SPK: line read=Type HELP to view commands
+    cmd: TRUN - SPK: Fuzzing Variable 0:1
+    cmd: TRUN - SPK: ror_HELP.spk : line read=Welcome to my server
+    cmd: TRUN - SPK: Variablesize= 5004
+    cmd: TRUN - SPK: tried to send to a closed socket!
+    closed socked
+    Enter Crash Condition Notes: looks like a vanilla BoF
+    [*] Reproduce with: generic_send_tcp 192.168.1.1 8080 ror_TRUN.spk 0 1
+    
+    
+     The crash condition has been logged at: ./ror_spike_notes.txt 
+    
+     
+    -- Terminated. Enjoy getting your shell. --
+
+#
+    $ cat ror_spike_notes.txt 
+    -----------------------------------------------
+    Started script: 1456022260
+    Fuzzing Variable 0:1
+    tried to send to a closed socket!
+    NOTES: looks like a vanilla BoF
+    [*] Reproduce with: generic_send_tcp 192.168.1.1 8080 ror_TRUN.spk 0 1
+
 
 ## BadChars
 
