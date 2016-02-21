@@ -42,10 +42,10 @@ I would have liked to have modified it to wait for you to restart the debugger, 
     cmd: TRUN - SPK: Total Number of Strings is 681
     cmd: TRUN - SPK: Fuzzing
     cmd: TRUN - SPK: Fuzzing Variable 0:0
-    cmd: TRUN - SPK: ror_HELP.spk : line read=Welcome to my server
+    cmd: TRUN - SPK: ror_TRUN.spk : line read=Welcome to my server
     cmd: TRUN - SPK: line read=Type HELP to view commands
     cmd: TRUN - SPK: Fuzzing Variable 0:1
-    cmd: TRUN - SPK: ror_HELP.spk : line read=Welcome to my server
+    cmd: TRUN - SPK: ror_TRUN.spk : line read=Welcome to my server
     cmd: TRUN - SPK: Variablesize= 5004
     cmd: TRUN - SPK: tried to send to a closed socket!
     closed socked
