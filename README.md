@@ -38,7 +38,7 @@ I would have liked to have modified it to wait for you to restart the debugger, 
     +-+-+-+ +-+-+-+-+-+
           by T.J Acton
     
-    Running: HELP
+    Running: TRUN
     cmd: TRUN - SPK: Total Number of Strings is 681
     cmd: TRUN - SPK: Fuzzing
     cmd: TRUN - SPK: Fuzzing Variable 0:0
